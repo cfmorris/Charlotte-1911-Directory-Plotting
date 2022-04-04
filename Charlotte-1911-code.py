@@ -72,4 +72,3 @@ dfpres.apply(lambda row:folium.CircleMarker(location=[row["latitude"], row["long
 dfvpres.apply(lambda row:folium.CircleMarker(location=[row["latitude"], row["longitude"]], color="blue", popup=[row["Name"], row["Address"], row["Job"]]).add_to(map2), axis=1)
 
 map2
-
