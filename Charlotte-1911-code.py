@@ -5,6 +5,7 @@
 import geopandas as gpd
 import geopy 
 import pandas as pd
+import folium
 
 locator = geopy.geocoders.Nominatim(user_agent="cityDirectory", timeout=2)
 eiffel = locator.geocode("Champ de Mars, Paris, France", language="en")
@@ -49,9 +50,7 @@ dfwhite.apply(lambda row:folium.CircleMarker(location=[row["latitude"], row["lon
 
 map1
 
-
 ## Mapping entries by job
-
 
 dfjob = dfmin.groupby(dfmin.Job)
 dflab = dfjob.get_group("lab")
